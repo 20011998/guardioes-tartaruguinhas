@@ -1,0 +1,7 @@
+# Dependências do Projeto Guardiões das Tartaruguinhas
+# Baseado no pyproject.toml do ambiente de desenvolvimento
+
+streamlit>=1.47.0
+pandas>=2.3.1
+plotly>=6.2.0
+numpy>=2.3.2

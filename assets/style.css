@@ -1,0 +1,468 @@
+/* Ocean-themed custom styles for Streamlit */
+
+/* Import ocean-inspired fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Main theme variables */
+:root {
+    --ocean-blue: #0D47A1;
+    --deep-sea: #1565C0;
+    --wave-blue: #1E88E5;
+    --sea-foam: #4FC3F7;
+    --sand-beige: #FFF8E1;
+    --coral-red: #FF5722;
+    --seaweed-green: #4CAF50;
+    --sunset-orange: #FF9800;
+}
+
+/* Global styling */
+.main {
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 50%, #90CAF9 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Ensure text contrast for all white backgrounds */
+.main .element-container,
+.main .stMarkdown,
+.main .stText,
+.main p,
+.main h1, .main h2, .main h3, .main h4, .main h5, .main h6,
+.main div,
+.main span {
+    color: #212121 !important;
+}
+
+/* Override for elements with blue backgrounds */
+.main-header *,
+.sidebar-header *,
+.stButton > button,
+.streamlit-expanderHeader *,
+.stTabs [data-baseweb="tab"] {
+    color: white !important;
+}
+
+/* Header styling */
+.main-header {
+    background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--deep-sea) 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(13, 71, 161, 0.3);
+}
+
+.main-header h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.main-header p {
+    color: var(--sea-foam);
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0 0;
+    font-weight: 300;
+}
+
+/* Sidebar styling */
+.sidebar-header {
+    background: linear-gradient(135deg, var(--wave-blue) 0%, var(--sea-foam) 100%);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.sidebar-header h2 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Metric cards styling */
+div[data-testid="metric-container"] {
+    background: linear-gradient(135deg, white 0%, #F8F9FA 100%);
+    border: 2px solid var(--sea-foam);
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(79, 195, 247, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #212121 !important;
+}
+
+div[data-testid="metric-container"] * {
+    color: #212121 !important;
+}
+
+div[data-testid="metric-container"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(79, 195, 247, 0.3);
+}
+
+/* Button styling */
+.stButton > button {
+    background: linear-gradient(135deg, var(--wave-blue) 0%, var(--sea-foam) 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(30, 136, 229, 0.3);
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 136, 229, 0.4);
+}
+
+/* Selectbox styling */
+.stSelectbox > div > div {
+    background: linear-gradient(135deg, white 0%, #F8F9FA 100%);
+    border: 2px solid var(--sea-foam);
+    border-radius: 10px;
+    color: #212121 !important;
+}
+
+.stSelectbox > div > div * {
+    color: #212121 !important;
+}
+
+/* Form styling */
+.stForm {
+    background: linear-gradient(135deg, white 0%, #F8F9FA 100%);
+    border: 2px solid var(--sea-foam);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(79, 195, 247, 0.2);
+    color: #212121 !important;
+}
+
+.stForm * {
+    color: #212121 !important;
+}
+
+/* Form labels */
+.stForm label {
+    color: #212121 !important;
+    font-weight: 600;
+}
+
+/* Alert styling */
+.stAlert {
+    border-radius: 15px;
+    border-left: 5px solid;
+    animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+
+.stAlert[data-baseweb="notification"] {
+    background: linear-gradient(135deg, #E8F5E8 0%, #C8E6C9 100%);
+    border-left-color: var(--seaweed-green);
+}
+
+/* Error alert */
+.stAlert[data-baseweb="notification"][kind="error"] {
+    background: linear-gradient(135deg, #FFEBEE 0%, #FFCDD2 100%);
+    border-left-color: var(--coral-red);
+}
+
+/* Warning alert */
+.stAlert[data-baseweb="notification"][kind="warning"] {
+    background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+    border-left-color: var(--sunset-orange);
+}
+
+/* Dataframe styling */
+.stDataFrame {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    background: transparent !important;
+}
+
+.stDataFrame table {
+    background: transparent !important;
+}
+
+.stDataFrame thead th {
+    background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--deep-sea) 100%) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 12px !important;
+    border: none !important;
+}
+
+.stDataFrame tbody td {
+    padding: 12px !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+}
+
+/* Remove any white backgrounds from dataframe */
+.stDataFrame div,
+.stDataFrame span {
+    background: transparent !important;
+}
+
+/* Tab styling */
+.stTabs [data-baseweb="tab-list"] {
+    background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--deep-sea) 100%);
+    border-radius: 15px 15px 0 0;
+}
+
+.stTabs [data-baseweb="tab"] {
+    color: white;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 10px 10px 0 0;
+    margin: 0 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.stTabs [aria-selected="true"] {
+    background: white;
+    color: var(--ocean-blue);
+}
+
+/* Expander styling */
+.streamlit-expanderHeader {
+    background: linear-gradient(135deg, var(--sea-foam) 0%, var(--wave-blue) 100%);
+    color: white !important;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.streamlit-expanderContent {
+    background: linear-gradient(135deg, white 0%, #F8F9FA 100%);
+    border: 2px solid var(--sea-foam);
+    border-radius: 0 0 10px 10px;
+    padding: 1.5rem;
+    color: #212121 !important;
+}
+
+.streamlit-expanderContent * {
+    color: #212121 !important;
+}
+
+/* Progress bar styling */
+.stProgress > div > div {
+    background: linear-gradient(90deg, var(--seaweed-green) 0%, var(--sea-foam) 100%);
+    border-radius: 25px;
+}
+
+/* Number input styling */
+.stNumberInput > div > div > input {
+    background: linear-gradient(135deg, white 0%, #F8F9FA 100%);
+    border: 2px solid var(--sea-foam);
+    border-radius: 10px;
+    padding: 0.75rem;
+    color: #212121 !important;
+}
+
+/* Text area styling */
+.stTextArea > div > div > textarea {
+    background: linear-gradient(135deg, white 0%, #F8F9FA 100%);
+    border: 2px solid var(--sea-foam);
+    border-radius: 10px;
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #212121 !important;
+}
+
+/* Checkbox styling */
+.stCheckbox > label {
+    font-weight: 500;
+    color: var(--ocean-blue);
+}
+
+/* Custom wave animation for decorative elements */
+@keyframes ocean-wave {
+    0% { transform: translateX(0) translateY(0) scaleX(1); }
+    25% { transform: translateX(-10px) translateY(-5px) scaleX(1.1); }
+    50% { transform: translateX(5px) translateY(-10px) scaleX(0.9); }
+    75% { transform: translateX(-5px) translateY(-5px) scaleX(1.05); }
+    100% { transform: translateX(0) translateY(0) scaleX(1); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2rem;
+    }
+    
+    .main-header p {
+        font-size: 1rem;
+    }
+    
+    div[data-testid="metric-container"] {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--wave-blue) 0%, var(--sea-foam) 100%);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--deep-sea) 100%);
+}
+
+/* Loading animation for better UX */
+.stSpinner > div {
+    border-top-color: var(--wave-blue) !important;
+    animation: ocean-wave 1.5s ease-in-out infinite;
+}
+
+/* Footer styling if needed */
+.footer {
+    background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--deep-sea) 100%);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+/* Sidebar text fixes */
+.sidebar .element-container,
+.sidebar .stMarkdown,
+.sidebar .stText,
+.sidebar p,
+.sidebar h1, .sidebar h2, .sidebar h3, .sidebar h4, .sidebar h5, .sidebar h6,
+.sidebar div,
+.sidebar span {
+    color: white !important;
+}
+
+/* Sidebar metric cards */
+.sidebar div[data-testid="metric-container"] {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.2) 100%);
+    border: 2px solid rgba(255,255,255,0.3);
+    color: white !important;
+}
+
+.sidebar div[data-testid="metric-container"] * {
+    color: white !important;
+}
+
+/* Main content area text contrast */
+.main .stDataFrame,
+.main .dataframe,
+.main table {
+    background: white;
+    color: #212121 !important;
+}
+
+.main .stDataFrame *,
+.main .dataframe *,
+.main table * {
+    color: #212121 !important;
+}
+
+/* Plotly chart text */
+.main .plotly {
+    background: white;
+    border-radius: 10px;
+}
+
+/* Input field placeholders */
+input::placeholder,
+textarea::placeholder {
+    color: #666666 !important;
+}
+
+/* Guardian identification input styling - More specific selectors */
+div.guardian-input input[type="text"],
+div.guardian-input .stTextInput input,
+div.guardian-input .stTextInput > div > div > input {
+    background: white !important;
+    background-color: white !important;
+    color: #0D47A1 !important;
+    border: 2px solid #4FC3F7 !important;
+    border-radius: 10px !important;
+    padding: 12px 16px !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    box-shadow: 0 2px 4px rgba(79, 195, 247, 0.1) !important;
+}
+
+div.guardian-input input::placeholder,
+div.guardian-input .stTextInput input::placeholder,
+div.guardian-input .stTextInput > div > div > input::placeholder {
+    color: #1565C0 !important;
+    opacity: 0.7 !important;
+}
+
+div.guardian-input input:focus,
+div.guardian-input .stTextInput input:focus,
+div.guardian-input .stTextInput > div > div > input:focus {
+    border-color: #0D47A1 !important;
+    box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1), 0 2px 8px rgba(79, 195, 247, 0.2) !important;
+    outline: none !important;
+    background: white !important;
+    background-color: white !important;
+    color: #0D47A1 !important;
+}
+
+div.guardian-input label,
+div.guardian-input .stTextInput label,
+div.guardian-input .stTextInput > label {
+    color: #0D47A1 !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
+}
+
+/* Custom styling for nest cards */
+.nest-card {
+    background: linear-gradient(135deg, #F5F5F5 0%, #E0E0E0 100%) !important;
+    border-radius: 10px !important;
+    padding: 15px !important;
+    margin: 10px 0 !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+    color: #0D47A1 !important;
+}
+
+.nest-card h4,
+.nest-card p,
+.nest-card strong {
+    color: #0D47A1 !important;
+}
+
+/* Risk-specific nest card borders */
+.nest-card.risk-green {
+    border: 3px solid #4CAF50 !important;
+}
+
+.nest-card.risk-yellow {
+    border: 3px solid #FFC107 !important;
+}
+
+.nest-card.risk-red {
+    border: 3px solid #F44336 !important;
+}
