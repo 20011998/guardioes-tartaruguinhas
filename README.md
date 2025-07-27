@@ -4,7 +4,8 @@ Sistema web interativo para monitoramento e proteção de ninhos de tartarugas m
 
 ## 📋 Sobre o Projeto
 
-O **Guardiões das Tartaruguinhas** é uma aplicação web que permite o monitoramento eficiente de ninhos de tartarugas marinhas ao longo das praias brasileiras. O sistema oferece funcionalidades completas para registro, acompanhamento e análise de dados de conservação.
+Estou muito feliz em poder compartilhar esse projeto que tenho trabalhado há pelo menos uma semana, se trata de um projeto funcional com a ajuda do Instituto I2A2, onde de forma gratuita os professores nos orientam e desafiam nossos conhecimentos com atividades práticas que envolvam programação, IA dentre outras habilidades.
+O **Projeto Guardiões das Tartaruguinhas** é uma aplicação web desenvolvida sob a orientação de professores do Instituto I2A2, no curso IA para Projetos Sustentáveis - Rumo à COP 30. Os dados utilizados são fictícios, a aplicação foi desenvolvida primeiramente em um documento no COLAB utilizando a linguagem Python, então foi levado ao Replit e utilizado o Vibe Coding para melhoria de funcionalidades.
 
 ### 🎯 Funcionalidades Principais
 
@@ -132,4 +133,4 @@ Este projeto apoia os esforços de conservação de tartarugas marinhas no Brasi
 
 ---
 
-Desenvolvido com 💙 para a conservação das tartarugas marinhas do Brasil.
+Desenvolvido com dedicação por uma entusiasta da tecnologia que atualmente está tentando mudar de área e entrar para o campo das tecnologias, ajudas e mais orientações são sempre bem-vindas!
