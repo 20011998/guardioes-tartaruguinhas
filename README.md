@@ -1,6 +1,7 @@
 # 🐢 Guardiões das Tartaruguinhas
 
 Sistema web interativo para monitoramento e proteção de ninhos de tartarugas marinhas, desenvolvido com Streamlit e tema oceânico.
+![Demonstração do Dashboard Guardiões das Tartaruguinhas](assets/gif_dashboard_tartaruguinha.gif)
 
 ## 📋 Sobre o Projeto
 
